@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `laravel_master`
---
+-
 
 -- --------------------------------------------------------
 
@@ -41,16 +40,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
   KEY `fk_comments_images` (`image_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `comments`
---
-
-INSERT INTO `comments` (`id`, `user_id`, `image_id`, `content`, `created_at`, `updated_at`) VALUES
-(4, 7, 8, 'Me gusta mucho el bizcocho', '2019-06-30 01:34:11', '2019-06-30 01:34:11'),
-(5, 7, 8, 'dsadas', '2019-06-30 03:35:09', '2019-06-30 03:35:09'),
-(7, 8, 6, 'Soy yo jajaja', '2019-06-30 07:13:56', '2019-06-30 07:13:56');
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `images`
@@ -68,18 +57,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   KEY `fk_images_users` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `images`
---
-
-INSERT INTO `images` (`id`, `user_id`, `image_path`, `description`, `created_at`, `updated_at`) VALUES
-(5, 7, '1561486929medias2.png', 'Hola camo esyasd', '2019-06-25 18:22:09', '2019-06-25 18:22:09'),
-(6, 7, '1561487281deku4.jpg', 'MIradd', '2019-06-25 18:28:01', '2019-06-25 18:28:01'),
-(8, 7, '1561490637Captura de pantalla (14).png', 'Hola', '2019-06-25 19:23:57', '2019-06-25 19:23:57'),
-(10, 8, '1561879110mediolas4.jpg', 'Un dibujo que hice ayer!!', '2019-06-30 07:18:30', '2019-06-30 07:18:30');
-
--- --------------------------------------------------------
-
+-
 --
 -- Estructura de tabla para la tabla `likes`
 --
@@ -97,14 +75,6 @@ CREATE TABLE IF NOT EXISTS `likes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `likes`
---
-
-INSERT INTO `likes` (`id`, `user_id`, `image_id`, `created_at`, `updated_at`) VALUES
-(14, 8, 8, '2019-06-30 09:15:51', '2019-06-30 09:15:51'),
-(23, 8, 10, '2019-06-30 09:32:11', '2019-06-30 09:32:11');
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `users`
@@ -127,13 +97,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `role`, `name`, `surname`, `nick`, `email`, `password`, `image`, `created_at`, `updated_at`, `remember_token`) VALUES
-(7, 'user', 'Jose', 'Quesada', 'root', 'root@root.com', '$2y$10$1TsGIDj1PWWC2e/dBcUEXeJpxbv7bYWAEIn.5GSkhXHP8mcuCgAWa', '1561326046dekucolor.jpg', '2019-06-23 07:47:11', '2019-06-23 21:40:46', NULL),
-(8, 'user', 'Deku', 'Quesada', 'deku', 'deku@deku.com', '$2y$10$p3JOJFe18elrLcTMTqUtzeA6BoiUFWqYoiUPmUNNji0SsbW7/D93a', '1561878985deku4.jpg', '2019-06-30 07:12:33', '2019-06-30 07:16:39', NULL);
-
 --
 -- Restricciones para tablas volcadas
 --
