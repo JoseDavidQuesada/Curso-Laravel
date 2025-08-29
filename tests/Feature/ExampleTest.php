@@ -18,4 +18,28 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    /**
+     * Test that login page is accessible.
+     *
+     * @return void
+     */
+    public function testLoginPageIsAccessible()
+    {
+        $response = $this->get('/login');
+        
+        $response->assertStatus(200);
+    }
+
+    /**
+     * Test that register page is accessible.
+     *
+     * @return void
+     */
+    public function testRegisterPageIsAccessible()
+    {
+        $response = $this->get('/register');
+        
+        $response->assertStatus(200);
+    }
 }

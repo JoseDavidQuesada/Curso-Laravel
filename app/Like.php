@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     protected $table = 'likes'; //Tabla de la base de datos
+    
+    protected $fillable = [
+        'user_id', 'image_id'
+    ];
 
     //Relacion many to one.
     public function user(){

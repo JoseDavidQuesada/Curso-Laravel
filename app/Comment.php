@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     protected $table = 'comments'; //Tabla de la base de datos
+    
+    protected $fillable = [
+        'user_id', 'image_id', 'content'
+    ];
 
     //Relacion many to one.
     public function user(){

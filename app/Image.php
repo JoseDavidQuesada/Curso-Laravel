@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     protected $table = 'images'; //Tabla de la base de datos
+    
+    protected $fillable = [
+        'user_id', 'image_path', 'description'
+    ];
 
     //Relacion one to many. 
     public function comments(){
